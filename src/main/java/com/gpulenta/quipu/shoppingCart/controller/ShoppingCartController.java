@@ -60,6 +60,7 @@ public class ShoppingCartController {
         return new ResponseEntity<>(shoppingCartService.saveShoppingCart(shoppingCart), HttpStatus.CREATED);
     }
 
+
     @Operation(summary = "Delete shopping cart by ID", description = "Delete a shopping cart by its ID")
     @ApiResponse(responseCode = "200", description = "Shopping cart deleted successfully")
     @ApiResponse(responseCode = "404", description = "Shopping cart not found")
