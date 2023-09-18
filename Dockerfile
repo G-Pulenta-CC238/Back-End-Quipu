@@ -1,5 +1,14 @@
-FROM eclipse-temurin:17-jdk-alpine
-VOLUME /tmp
-ARG JAR_FILE
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+# Usa una imagen base de Java
+FROM openjdk:11-jre-slim
+
+# Establece el directorio de trabajo en /app
+WORKDIR /app
+
+# Copia el archivo JAR de tu aplicación al contenedor
+COPY target/quipu-0.0.1-SNAPSHOT.jar app.jar
+
+# Expone el puerto en el que se ejecuta tu aplicación Spring Boot
+EXPOSE 8080
+
+# Comando para ejecutar la aplicación cuando se inicia el contenedor
+CMD ["java", "-jar", "app.jar"]
