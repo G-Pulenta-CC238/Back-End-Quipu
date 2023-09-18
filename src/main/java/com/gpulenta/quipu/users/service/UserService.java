@@ -16,7 +16,6 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-
     public User createUser(User user) { return userRepository.save(user); }
 
     public Optional<User> getUserByUsername(String username) {
