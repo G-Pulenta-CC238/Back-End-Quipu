@@ -6,7 +6,7 @@ COPY . .
 RUN mvn clean package -Pprod -DskipTests
 
 # Package stage
-FROM openjdk:20
+FROM openjdk:20-jdk-slim
 WORKDIR /app
 COPY --from=build /app/target/quipu-0.0.1-SNAPSHOT.jar app.jar
 # ENV PORT=8080
