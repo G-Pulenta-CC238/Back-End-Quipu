@@ -8,6 +8,7 @@ Somos el Startup **GPulenta** , creadores de **Quipu**.
 - Aldo Medina Paredes          **Developer**
 - Wilver Arana Ramos            **Developer**
 - Salomon Zegarra Moreno   **Developer**
+  
 	> GPulenta tiene como misión desarrollar aplicaciones de alto nivel para el uso masivo.
 
 ## Requirements
