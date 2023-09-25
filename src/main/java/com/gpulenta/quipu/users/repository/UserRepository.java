@@ -9,6 +9,7 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
     Optional<User> findByUsername(String username);
+    Optional<User> findByEmailAndPassword(String email, String password);
     List<User> findByEmail(String email);
     List<User> findByLastname(String lastName);
 }

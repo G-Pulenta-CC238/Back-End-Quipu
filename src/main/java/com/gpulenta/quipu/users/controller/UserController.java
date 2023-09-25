@@ -68,4 +68,11 @@ public class UserController {
         userService.deleteUserById(id);
         return ResponseEntity.noContent().build();
     }
+
+    @Operation(summary = "Get a user by email and password", description = "Get a user's details by their email and password")
+    @GetMapping("/byEmailAndPassword")
+    public ResponseEntity<User> getUserByEmailAndPassword(@RequestParam String email, @RequestParam String password) {
+        Optional<User> user = userService.getUserByEmailAndPassword(email, password);
+        return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
 }
