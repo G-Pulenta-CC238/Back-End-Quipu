@@ -1,12 +1,13 @@
 package gpulenta.quipu.shoppingCart.model;
 
 import gpulenta.quipu.product.model.Product;
+
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Data
 @Builder
 @AllArgsConstructor
